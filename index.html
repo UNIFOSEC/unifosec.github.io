@@ -100,7 +100,12 @@
 
   .recs{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
   .rec{background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:20px; box-shadow:var(--shadow)}
-  .rec .quote{font-size:15px; white-space:pre-line}
+  .rec .quote{font-size:15px; white-space:pre-line;
+    display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden}
+  .rec .quote.expanded{-webkit-line-clamp:unset; overflow:visible}
+  .rec .more{margin-top:8px; background:none; border:none; padding:0; cursor:pointer;
+    color:var(--accent); font-weight:600; font-size:13.5px}
+  .rec .more:hover{text-decoration:underline}
   .rec .who{display:flex; align-items:center; gap:12px; margin-top:16px}
   .rec .who .dot{width:40px;height:40px;border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--accent2));
     display:grid; place-items:center; color:#fff; font-weight:700; font-size:15px}
@@ -296,11 +301,29 @@
   }
   function renderRecs(items){
     var g = document.getElementById('recsGrid'); g.innerHTML='';
+    // Hide unfilled placeholder recommendations (fields still like "[Name]").
+    items = (items || []).filter(function(r){
+      var q = ((r && r.quote) || '').trim(), n = ((r && r.name) || '').trim();
+      return q && q.charAt(0) !== '[' && n.charAt(0) !== '[';
+    });
     items.forEach(function(r){
-      g.appendChild(el('div','rec',
+      var card = el('div','rec',
         '<div class="quote">“'+esc(r.quote)+'”</div>'+
+        '<button class="more" type="button" hidden>Read more</button>'+
         '<div class="who"><div class="dot">'+esc(r.initials||'—')+'</div>'+
-        '<div><b>'+esc(r.name)+'</b><span>'+esc(r.title)+'</span></div></div>'));
+        '<div><b>'+esc(r.name)+'</b><span>'+esc(r.title)+'</span></div></div>');
+      g.appendChild(card);
+      var q = card.querySelector('.quote'), btn = card.querySelector('.more');
+      // Show the toggle only when the collapsed quote actually overflows.
+      requestAnimationFrame(function(){
+        if (q.scrollHeight - q.clientHeight > 4){
+          btn.hidden = false;
+          var toggle = function(){ var open = q.classList.toggle('expanded'); btn.textContent = open ? 'Read less' : 'Read more'; };
+          btn.addEventListener('click', toggle);
+          q.style.cursor = 'pointer';
+          q.addEventListener('click', toggle);
+        }
+      });
     });
   }
 
