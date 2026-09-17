@@ -65,15 +65,18 @@
   ],
   "recommendations": [
     {
-      "quote": "[Add a real recommendation here — a few sentences on how Jose delivered a security outcome, shipped a project, or raised the team's bar.]",
-      "name": "[Name]",
-      "title": "[Title, Company]",
-      "initials": "AB"
+      "quote": "Jose was a critical part of the small and powerful IT/MIS team at ChildNet Inc. During his time there I was grateful to benefit from his expertise. While his role at the time was Management Support Specialist II, he proved his abilities as a system administrator and security professional.
+He designed a clear plan to increase the Windows Server functional domain level from 2003 to 2012. His plan prevented any confusion during the upgrade process. The upgrade happened with no service disruption thanks to his clear plan. Jose also prevented a loss of productivity during a Cisco switch failure. At the time, a core switch failed and brought the main office to a halt. Our network services contractor was unable to respond immediately. Jose then volunteered his skills to login and reconfigure another switch to act as a replacement. The office was back online within an hour. 
+Jose's last major accomplishment I want to highlight is high work with our computer re imaging workflow. Thanks to his research with the Microsoft provided tools, ChildNet was able to reduce our computer setup time from 1 day to less than an hour. This is also improved our inventory from a few desktops and laptops to more than 20 at any time. This was all done with minimal capital expense.
+Jose accomplished these and many other great projects while still excelling as a Management Support Specialist II who received 30-50 tickets per day.",
+      "name": "Marcus Batson",
+      "title": "Software Support Engineer, Applied Materials",
+      "initials": "MB"
     },
     {
-      "quote": "[Add a second recommendation — a client or partner describing the impact of ADATT or a security engagement.]",
-      "name": "[Name]",
-      "title": "[Title, Company]",
+      "quote": "Working with Jose was an honor. In an industry that can be full of egos, Jose never withheld sharing knowledge about IT and how to solve problems efficiently. His hunger for perusing certifications and learning about emerging technologies is contagious and inspiring. Anyone that gets to work with him will be a better admin/engineer.",
+      "name": "Noah F.",
+      "title": "IT systems Administrator, Miami-Dade county ITD",
       "initials": "CD"
     },
     {
