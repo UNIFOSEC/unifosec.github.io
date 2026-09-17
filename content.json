@@ -1,5 +1,6 @@
 {
-  "_note": "Edit this file to update the site — no HTML needed. Skills, Projects, and Recommendations render from here. You can edit it right in GitHub's web/mobile editor and the live site updates on save.",
+  "$schema": "content.schema.json",
+  "_note": "Edit this file to update the site — no HTML needed. Skills, Projects, and Recommendations render from here. You can edit it right in GitHub's web/mobile editor and the live site updates on save. The editor validates against content.schema.json.",
   "skills": [
     {
       "icon": "🛡️",

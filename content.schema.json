@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UNIFOSEC portfolio content",
+  "description": "Content rendered by index.html. Editing this file updates the live site.",
+  "type": "object",
+  "required": ["skills", "projects", "recommendations"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string", "description": "Path to this schema (enables editor validation)." },
+    "_note": { "type": "string", "description": "Free-text note; ignored by the site." },
+    "skills": {
+      "type": "array",
+      "description": "Skill category cards shown in the Skills section.",
+      "items": {
+        "type": "object",
+        "required": ["title", "tags"],
+        "additionalProperties": false,
+        "properties": {
+          "icon": { "type": "string", "description": "Emoji for the card badge, e.g. 🛡️ 🤖 ☁️ 📋 🔐." },
+          "title": { "type": "string", "description": "Card title, e.g. 'Application Security'." },
+          "subtitle": { "type": "string", "description": "One-line description under the title." },
+          "tags": {
+            "type": "array",
+            "description": "Skill chips shown in the card.",
+            "items": { "type": "string" },
+            "minItems": 1
+          }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "description": "Project cards shown in the Projects section.",
+      "items": {
+        "type": "object",
+        "required": ["title", "desc"],
+        "additionalProperties": false,
+        "properties": {
+          "tag": { "type": "string", "description": "Small pill label, e.g. 'Open source · AppSec'." },
+          "title": { "type": "string", "description": "Project name." },
+          "repo": {
+            "type": "string",
+            "description": "GitHub repo as 'owner/name'. When set, the card shows live ★ stars and last-updated.",
+            "pattern": "^[^/]+/[^/]+$"
+          },
+          "desc": { "type": "string", "description": "Short project description." },
+          "stack": {
+            "type": "array",
+            "description": "Tech/skill tags shown under the description.",
+            "items": { "type": "string" }
+          },
+          "links": {
+            "type": "array",
+            "description": "Buttons/links for the card.",
+            "items": {
+              "type": "object",
+              "required": ["label", "url"],
+              "additionalProperties": false,
+              "properties": {
+                "label": { "type": "string", "description": "Link text, e.g. '▸ Open live dashboard'." },
+                "url": { "type": "string", "description": "Destination URL." }
+              }
+            }
+          }
+        }
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "description": "Testimonials shown in the Recommendation section.",
+      "items": {
+        "type": "object",
+        "required": ["quote", "name"],
+        "additionalProperties": false,
+        "properties": {
+          "quote": { "type": "string", "description": "The recommendation text (no surrounding quotes needed)." },
+          "name": { "type": "string", "description": "Person's name." },
+          "title": { "type": "string", "description": "Their role and company." },
+          "initials": { "type": "string", "description": "1-3 letters shown in the avatar circle.", "maxLength": 3 }
+        }
+      }
+    }
+  }
+}
