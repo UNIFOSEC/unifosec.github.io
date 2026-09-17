@@ -1,0 +1,85 @@
+{
+  "_note": "Edit this file to update the site — no HTML needed. Skills, Projects, and Recommendations render from here. You can edit it right in GitHub's web/mobile editor and the live site updates on save.",
+  "skills": [
+    {
+      "icon": "🛡️",
+      "title": "Application Security",
+      "subtitle": "Secure-by-design across the SDLC.",
+      "tags": ["Threat modeling (STRIDE)", "Secure code review", "OWASP Top 10 / API Top 10", "Vulnerability management", "SARIF"]
+    },
+    {
+      "icon": "🤖",
+      "title": "Security Automation & AI",
+      "subtitle": "Tooling that scales security operations.",
+      "tags": ["Python", "PowerShell", "LLM / Claude", "SAST / DAST / SCA", "CI/CD guardrails", "Prompt-injection defense"]
+    },
+    {
+      "icon": "☁️",
+      "title": "Cloud & Identity",
+      "subtitle": "Least-privilege, Zero Trust, hybrid identity.",
+      "tags": ["Azure", "AWS", "GCP", "Entra ID & Graph", "IAM / OAuth 2.0", "Kubernetes"]
+    },
+    {
+      "icon": "📋",
+      "title": "Governance & Compliance",
+      "subtitle": "Audit-driven, standards-aligned.",
+      "tags": ["NIST", "ISO 27001", "SOC 2", "CIS", "GDPR", "Incident response"]
+    }
+  ],
+  "projects": [
+    {
+      "tag": "Open source · AppSec",
+      "title": "ThreatLens",
+      "repo": "UNIFOSEC/threatlens",
+      "desc": "AI-assisted application-security triage for CI/CD. Ingests scanner findings (Semgrep / SARIF), de-duplicates and clusters them into vulnerability classes, then uses an LLM to adjust severity, flag false positives, and generate remediation — with defenses against prompt injection. Outputs a live interactive dashboard and SARIF for GitHub Code Scanning.",
+      "stack": ["Python", "Claude / LLM", "SARIF", "GitHub Actions"],
+      "links": [
+        {"label": "▸ Open live dashboard", "url": "https://unifosec.github.io/threatlens/"},
+        {"label": "▸ Source code", "url": "https://github.com/UNIFOSEC/threatlens"}
+      ]
+    },
+    {
+      "tag": "Commercial platform",
+      "title": "ADATT — Identity Security Automation",
+      "desc": "A commercial platform that automates secure employee offboarding across hybrid Active Directory + Microsoft 365 — account disable, full MFA/FIDO2 teardown, session/token revocation, license reclamation, and compliance-grade audit reporting. Built end-to-end with least-privilege OAuth and encrypted, no-credential-storage design.",
+      "stack": ["PowerShell", "MS Graph", "Entra ID", "Cloudflare Workers"],
+      "links": [
+        {"label": "▸ Visit ADATT", "url": "https://adatt.unifosec.com"}
+      ]
+    },
+    {
+      "tag": "Architecture",
+      "title": "Identity Lifecycle Governance",
+      "desc": "Audit-driven automated onboarding/offboarding for IT-admin and MSP contexts across Active Directory, Entra ID, and Exchange Online — closing orphaned-account and standing-access risks that are a primary lateral-movement vector.",
+      "stack": ["IAM", "Multi-tenant", "Audit logging"],
+      "links": []
+    },
+    {
+      "tag": "AI",
+      "title": "AI Feedback Application",
+      "desc": "An AI application that collects and analyzes customer feedback to improve AI-agent behavior — applying AI development coursework to a working prototype.",
+      "stack": ["LLM", "Python", "Product"],
+      "links": []
+    }
+  ],
+  "recommendations": [
+    {
+      "quote": "[Add a real recommendation here — a few sentences on how Jose delivered a security outcome, shipped a project, or raised the team's bar.]",
+      "name": "[Name]",
+      "title": "[Title, Company]",
+      "initials": "AB"
+    },
+    {
+      "quote": "[Add a second recommendation — a client or partner describing the impact of ADATT or a security engagement.]",
+      "name": "[Name]",
+      "title": "[Title, Company]",
+      "initials": "CD"
+    },
+    {
+      "quote": "[Add a third recommendation — a peer describing your collaboration, mentoring, or technical depth.]",
+      "name": "[Name]",
+      "title": "[Title, Company]",
+      "initials": "EF"
+    }
+  ]
+}
