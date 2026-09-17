@@ -30,13 +30,13 @@
   "projects": [
     {
       "tag": "Open source · AppSec",
-      "title": "ThreatLens",
-      "repo": "UNIFOSEC/threatlens",
+      "title": "Cullwise",
+      "repo": "UNIFOSEC/cullwise",
       "desc": "AI-assisted application-security triage for CI/CD. Ingests scanner findings (Semgrep / SARIF), de-duplicates and clusters them into vulnerability classes, then uses an LLM to adjust severity, flag false positives, and generate remediation — with defenses against prompt injection. Outputs a live interactive dashboard and SARIF for GitHub Code Scanning.",
       "stack": ["Python", "Claude / LLM", "SARIF", "GitHub Actions"],
       "links": [
-        {"label": "▸ Open live dashboard", "url": "https://unifosec.github.io/threatlens/"},
-        {"label": "▸ Source code", "url": "https://github.com/UNIFOSEC/threatlens"}
+        {"label": "▸ Open live dashboard", "url": "https://unifosec.github.io/cullwise/"},
+        {"label": "▸ Source code", "url": "https://github.com/UNIFOSEC/cullwise"}
       ]
     },
     {
