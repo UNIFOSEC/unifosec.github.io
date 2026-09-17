@@ -150,6 +150,7 @@
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#recommendation">Recommendation</a>
+      <a href="#comments">Comments</a>
       <a class="nav-cta" href="#contact">Work with me</a>
     </nav>
   </div>
@@ -241,6 +242,17 @@
   </div>
 </section>
 
+<section id="comments" style="background:var(--bg2)">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-kicker">Comments</div>
+      <h2 class="sec-title">Leave a comment</h2>
+      <p class="muted" style="margin-top:8px">Sign in with GitHub to leave a public comment — stored in this site's GitHub Discussions.</p>
+    </div>
+    <div id="giscus-mount" style="min-height:50px"></div>
+  </div>
+</section>
+
 <footer>
   <div class="container foot-inner">
     <div class="muted">© <span id="yr"></span> Jose Ernest · UNIFOSEC</div>
@@ -264,7 +276,7 @@
     entries.forEach(function(e){ if(e.isIntersecting){ links.forEach(function(l){l.classList.remove('active');});
       var a=map[e.target.id]; if(a) a.classList.add('active'); } });
   }, {rootMargin:'-45% 0px -50% 0px'});
-  ['about','skills','projects','recommendation','contact'].forEach(function(id){ var el=document.getElementById(id); if(el) obs.observe(el); });
+  ['about','skills','projects','recommendation','comments','contact'].forEach(function(id){ var el=document.getElementById(id); if(el) obs.observe(el); });
 
   // ---------- helpers ----------
   function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
@@ -354,6 +366,40 @@
         document.getElementById(id).innerHTML = '<p class="muted">Content unavailable. (This section loads from content.json on the live site.)</p>';
       });
     });
+</script>
+<script>
+  // ---------- Giscus comments (GitHub Discussions) ----------
+  // Setup: (1) enable Discussions on the repo, (2) install the giscus GitHub App,
+  // (3) at https://giscus.app get repoId + categoryId and paste them below.
+  (function(){
+    var G = {
+      repo: "UNIFOSEC/unifosec.github.io",
+      repoId: "REPLACE_REPO_ID",
+      category: "General",
+      categoryId: "REPLACE_CATEGORY_ID"
+    };
+    var mount = document.getElementById('giscus-mount');
+    if (!mount) return;
+    if (G.repoId.indexOf('REPLACE') === 0 || G.categoryId.indexOf('REPLACE') === 0){
+      mount.innerHTML = '<p class="muted">💬 Comments are being set up — check back soon.</p>';
+      return;
+    }
+    var s = document.createElement('script');
+    s.src = 'https://giscus.app/client.js';
+    s.async = true; s.crossOrigin = 'anonymous';
+    s.setAttribute('data-repo', G.repo);
+    s.setAttribute('data-repo-id', G.repoId);
+    s.setAttribute('data-category', G.category);
+    s.setAttribute('data-category-id', G.categoryId);
+    s.setAttribute('data-mapping', 'pathname');
+    s.setAttribute('data-strict', '0');
+    s.setAttribute('data-reactions-enabled', '1');
+    s.setAttribute('data-emit-metadata', '0');
+    s.setAttribute('data-input-position', 'top');
+    s.setAttribute('data-theme', 'preferred_color_scheme');
+    s.setAttribute('data-lang', 'en');
+    mount.appendChild(s);
+  })();
 </script>
 </body>
 </html>
