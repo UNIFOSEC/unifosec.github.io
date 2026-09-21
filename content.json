@@ -41,8 +41,8 @@
     },
     {
       "tag": "Commercial platform",
-      "title": "ADATT — Identity Security Automation",
-      "desc": "A commercial platform that automates secure employee offboarding across hybrid Active Directory + Microsoft 365 — account disable, full MFA/FIDO2 teardown, session/token revocation, license reclamation, and compliance-grade audit reporting. Built end-to-end with least-privilege OAuth and encrypted, no-credential-storage design.",
+      "title": "ADATT — Identity Lifecycle Automation",
+      "desc": "A commercial platform that automates secure employee onboarding and offboarding across hybrid Active Directory + Microsoft 365. On day one it provisions accounts, group memberships, licenses and mailboxes from a template; on exit it disables accounts with full MFA/FIDO2 teardown, session/token revocation, license reclamation, and compliance-grade audit reporting. Built end-to-end with least-privilege OAuth and encrypted, no-credential-storage design.",
       "stack": ["PowerShell", "MS Graph", "Entra ID", "Cloudflare Workers"],
       "links": [
         {"label": "▸ Visit ADATT", "url": "https://adatt.unifosec.com"}
