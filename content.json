@@ -49,6 +49,13 @@
       ]
     },
     {
+      "tag": "Product",
+      "title": "ePlanHub — Estate Planning",
+      "desc": "An estate-planning platform that helps individuals and families organize wills, trusts, beneficiaries, and key documents in one secure, structured place — making end-of-life and asset planning clearer and easier to manage.",
+      "stack": ["Web", "SaaS"],
+      "links": []
+    },
+    {
       "tag": "Architecture",
       "title": "Identity Lifecycle Governance",
       "desc": "Audit-driven automated onboarding/offboarding for IT-admin and MSP contexts across Active Directory, Entra ID, and Exchange Online — closing orphaned-account and standing-access risks that are a primary lateral-movement vector.",
