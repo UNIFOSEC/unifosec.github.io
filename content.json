@@ -49,10 +49,10 @@
       ]
     },
     {
-      "tag": "Product",
+      "tag": "LegalTech Platform",
       "title": "ePlanHub — Estate Planning",
-      "desc": "An estate-planning platform that helps individuals and families organize wills, trusts, beneficiaries, and key documents in one secure, structured place — making end-of-life and asset planning clearer and easier to manage.",
-      "stack": ["Web", "SaaS"],
+      "desc": "Estate-planning platform for attorneys and their clients. ePlanHub is the online estate planning platform attorneys use to run the whole matter — guided intake, automated wills, trusts & deeds, document review, e-signature, and remote online notarization — in one secure, lawyer-led workflow.",
+      "stack": ["LegalTech", "SaaS", "e-Signature", "Online Notarization"],
       "links": []
     },
     {
