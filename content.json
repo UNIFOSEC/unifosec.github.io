@@ -41,13 +41,13 @@
     },
     {
       "tag": "Open source · Full-stack AI",
-      "title": "CodeCraftHub",
-      "repo": "UNIFOSEC/codecrafthub",
-      "desc": "A learning planner for developers with an AI coach. Track courses on a drag-and-drop board, then chat with Coach (Claude) to plan study time — it adds, updates and removes courses through tool use, with every change undoable. Built security-first: strict Content Security Policy, no innerHTML, input validated on both sides, and a Cloudflare Worker proxy that keeps the API key server-side with origin allowlisting, rate limiting and prompt-injection defenses.",
+      "title": "KeepOnCourse",
+      "repo": "UNIFOSEC/keeponcourse",
+      "desc": "Your AI coach for finishing any course. Track courses on a drag-and-drop board, then chat with Coach (Claude) to plan study time, understand topics and catch up — it adds, updates and removes courses through tool use, with every change undoable. Built security-first: strict Content Security Policy, no innerHTML, input validated on both sides, and a Cloudflare Worker proxy that keeps the API key server-side with origin allowlisting, rate limiting and prompt-injection defenses.",
       "stack": ["TypeScript", "Claude / LLM", "Cloudflare Workers", "Node.js"],
       "links": [
-        {"label": "▸ Open live demo", "url": "https://unifosec.github.io/codecrafthub/"},
-        {"label": "▸ Source code", "url": "https://github.com/UNIFOSEC/codecrafthub"}
+        {"label": "▸ Open live demo", "url": "https://unifosec.github.io/keeponcourse/"},
+        {"label": "▸ Source code", "url": "https://github.com/UNIFOSEC/keeponcourse"}
       ]
     },
     {
