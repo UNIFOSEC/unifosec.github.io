@@ -40,6 +40,17 @@
       ]
     },
     {
+      "tag": "Open source · Full-stack AI",
+      "title": "CodeCraftHub",
+      "repo": "UNIFOSEC/codecrafthub",
+      "desc": "A learning planner for developers with an AI coach. Track courses on a drag-and-drop board, then chat with Coach (Claude) to plan study time — it adds, updates and removes courses through tool use, with every change undoable. Built security-first: strict Content Security Policy, no innerHTML, input validated on both sides, and a Cloudflare Worker proxy that keeps the API key server-side with origin allowlisting, rate limiting and prompt-injection defenses.",
+      "stack": ["TypeScript", "Claude / LLM", "Cloudflare Workers", "Node.js"],
+      "links": [
+        {"label": "▸ Open live demo", "url": "https://unifosec.github.io/codecrafthub/"},
+        {"label": "▸ Source code", "url": "https://github.com/UNIFOSEC/codecrafthub"}
+      ]
+    },
+    {
       "tag": "Commercial platform",
       "title": "ADATT — Identity Lifecycle Execution",
       "desc": "A commercial platform that executes secure employee onboarding and offboarding across hybrid Active Directory + Microsoft 365 — the hands-on execution layer for identity lifecycle actions that complements, rather than replaces, your identity management/IGA. On day one it provisions accounts, group memberships, licenses and mailboxes from a template; on exit it disables accounts with full MFA/FIDO2 teardown, session/token revocation, license reclamation, and compliance-grade audit reporting. Built end-to-end with least-privilege OAuth and encrypted, no-credential-storage design.",
